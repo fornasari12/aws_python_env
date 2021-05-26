@@ -65,3 +65,10 @@ black
 pytest-cov
 ```
 
+5. Run
+
+```
+make lint
+make format
+make test
+
