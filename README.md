@@ -1,3 +1,4 @@
+[![Python 3.8](https://github.com/fornasari12/aws_python_env/actions/workflows/main.yml/badge.svg)](https://github.com/fornasari12/aws_python_env/actions/workflows/main.yml)
 # Python Project Scaffold
 
 [Link to Course repository](https://github.com/noahgift/scaffold)
