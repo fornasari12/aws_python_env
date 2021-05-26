@@ -1,5 +1,7 @@
 # Python Project Scaffold
 
+[Link to Course repository](https://github.com/noahgift/scaffold)
+
 <img width="1530" alt="Screen Shot 2021-05-26 at 08 52 13" src="https://user-images.githubusercontent.com/57304126/119655195-b0799400-bdff-11eb-8a4a-4d9a9935e156.png">
 
 1. Connect to a GitHub repository with SSH keys and clone repository
@@ -38,20 +40,29 @@ source ~/.aws_python_env/bin/activate
 
 4. Fill Makefile
 
-```
+`
 install:
-  pip install --upgrade pip &&\
-    pip install -r requirements.txt
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
     
 format:
-  BLACK *.py
+	black *.py
   
 lint:
-  pylint --disable=R,C hello.py
+	pylint --disable=R,C hello.py
   
 test:
-  python -m pytest -vv --cov=hello test_hello.py
+	python -m pytest -vv --cov=hello test_hello.py
   
-```
+`
+
+4. Fill requirements
 
 ```
+pylint
+pytest
+click
+black
+pytest-cov
+```
+
