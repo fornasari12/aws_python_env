@@ -87,7 +87,7 @@ test:
 
 The `.github/workflows/pythonapp.yml` file stores the commands to build and test the project in GitHub Actions:
 
-```shell
+```cwl
 name: Python 3.8
 
 on: [push]
