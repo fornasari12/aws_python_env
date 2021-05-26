@@ -5,7 +5,7 @@
 
 [Link to Course repository](https://github.com/noahgift/scaffold)
 
-<img width="1530" alt="Screen Shot 2021-05-26 at 08 52 13" src="https://user-images.githubusercontent.com/57304126/119655195-b0799400-bdff-11eb-8a4a-4d9a9935e156.png">
+<img width="788" alt="Screen Shot 2021-05-26 at 12 19 58" src="https://user-images.githubusercontent.com/57304126/119686453-b9c52980-be1c-11eb-8f62-c4b169e517ce.png">
 
 ### Connect to a GitHub repository with SSH keys and clone repository
 
