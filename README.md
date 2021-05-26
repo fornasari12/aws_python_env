@@ -1,6 +1,8 @@
 [![Python 3.8](https://github.com/fornasari12/aws_python_env/actions/workflows/main.yml/badge.svg)](https://github.com/fornasari12/aws_python_env/actions/workflows/main.yml)
 # Python Project Scaffold
 
+[![Python 3.6](https://github.com/fornasari12/python_scaffold/actions/workflows/azure.yml/badge.svg)](https://github.com/fornasari12/python_scaffold/actions/workflows/azure.yml)
+
 [Link to Course repository](https://github.com/noahgift/scaffold)
 
 <img width="1530" alt="Screen Shot 2021-05-26 at 08 52 13" src="https://user-images.githubusercontent.com/57304126/119655195-b0799400-bdff-11eb-8a4a-4d9a9935e156.png">
