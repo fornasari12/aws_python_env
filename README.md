@@ -7,7 +7,7 @@
 
 <img width="1530" alt="Screen Shot 2021-05-26 at 08 52 13" src="https://user-images.githubusercontent.com/57304126/119655195-b0799400-bdff-11eb-8a4a-4d9a9935e156.png">
 
-1. Connect to a GitHub repository with SSH keys and clone repository
+### Connect to a GitHub repository with SSH keys and clone repository
 
 ```shell
 # Press Enter to store the keys in home directory
@@ -19,7 +19,7 @@ cat /home/ec2-user/.ssh/id_rsa.pub
 git clone git@github.com:fornasari12/aws_python_env.git
 ```
 
-2. Create required files.
+### Create required files.
 
 ```shell
 touch Makefile
@@ -28,7 +28,7 @@ touch test_hello.py
 touch requirements.txt
 ```
 
-3. Create invisible Python virtual enviroment.
+### Create invisible Python virtual enviroment.
 
 ```shell
 # create the venv with the same name of the repo
@@ -41,7 +41,17 @@ python3 -m venv ~/.aws_python_env
 source ~/.aws_python_env/bin/activate  
 ```
 
-4. What is a Makefile and Why Do You Need it?
+### Fill requirements
+
+```
+pylint
+pytest
+click
+black
+pytest-cov
+```
+
+### What is a Makefile and Why Do You Need it?
 
 A common reaction to hearing about a Makefile from an absolute beginner to Python is, "why do I need this?".  Generally, it is healthy to have skepticism about things that appear to add work.  In the case of a Makefile, though, the reason to use them in a project is that they are less work because they keep track of complicated build steps that are very difficult to remember and type out correctly.
 
@@ -72,20 +82,39 @@ test:
 	python -m pytest -vv --cov=hello test_hello.py
 ```
 
-4. Fill requirements
+# Review GitHub Actions GitHub Project
+
+
+The `.github/workflows/pythonapp.yml` file stores the commands to build and test the project in GitHub Actions:
+
+```shell
+name: Python 3.8
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Lint with pylint
+      run: |
+        make lint
+    - name: Test with pytest
+      run: |
+        make test
+    - name: Format code
+      run: |
+        make format
 
 ```
-pylint
-pytest
-click
-black
-pytest-cov
-```
-
-5. Run
-
-```
-make lint
-make format
-make test
 
