@@ -47,11 +47,11 @@ A common reaction to hearing about a Makefile from an absolute beginner to Pytho
 
 A great example is a lint step with the pylint tool.  With a Makefile, you only need to run:  make lint, and the same command can run inside a Continuous Integration server.  The alternative approach is to type out the full directive each time you need it, such as the following.
 
-pylint --disable=R,C *.py
+`pylint --disable=R,C *.py`
 
 This sequence is very prone to errors and quite tedious to repeatedly typing over your project's life.  Instead, it is much simpler to type the following:
 
-make lint
+`make lint`
 
 When you embrace the Makefile approach, it simplifies your workflow and makes it easier to integrate your project into a continuous integration system.  There is less code to type, and this is always a good thing for automation.  Further, Makefile commands are recognized by shell auto-completion, making it easy to "tab-complete" the steps.
 
